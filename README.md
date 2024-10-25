@@ -138,6 +138,9 @@ DNSOverTLS=yes
 * Disabling it can decrease the boot time by at least ~15s-20s:
 * `sudo systemctl disable NetworkManager-wait-online.service`
 
+### Add back the minimize button
+* `gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"`
+
 ### Disable Gnome Software from Startup Apps
 * Gnome software autostarts on boot for some reason, even though it is not required on every boot unless you want it to do updates in the background, this takes at least 100MB of RAM upto 900MB (as reported anecdotically). You can stop it from autostarting by:
 * `sudo rm /etc/xdg/autostart/org.gnome.Software.desktop`
